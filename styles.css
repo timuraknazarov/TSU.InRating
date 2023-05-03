@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+body{
+    background-color: black;
+}
+
+#Ellipse1
+{
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    left: 1px;
+    top: 269px;
+    z-index: -1;
+}
+
+#Ellipse2
+{
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    right: 1px;
+    top: 19px;
+    z-index:-1;
+}
+
+.wrapper
+{
+    width: 1180px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.logo-wrapper
+{
+    border: 1px solid #353637;
+    background-color: rgba(32, 32, 34, 0.5);
+    margin-bottom: 90px;
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 16px;
+    padding: 14px;
+    font-size: 16px;
+    
+}
+
+.logo-wrapper div,img
+{
+    background-color: rgba(53, 54, 55, 0.5);
+    background: none;
+    font-weight: 600;
+    vertical-align:middle;
+    height: 44px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-right: 20px;
+
+}
+ 
+h1
+{
+    color: white;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+h1 span
+{
+    color: #168FFF;
+}
+
+.blocks-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+
+.left-blocks
+{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.white-box
+{
+    background-color: white;
+    border-radius: 30px;
+    font-size: 24px;
+    padding: 30px;
+    width: 450px;
+    height: 170px;
+    margin-bottom: 20px;
+    font-weight: 450;
+    line-height: 28px;
+}
+
+.blue-box
+{
+    background: #168FFF;
+    border-radius: 30px;
+    width: 450px;
+    height: 250px;
+    color: white;
+    font-size: 24px;
+    padding: 30px;
+    height: 250px;
+    font-weight: 450;
+    line-height: 28px;
+
+    display: inline;
+}
+
+.clean-box
+{
+    border: 1px solid #353637;
+    background-color: rgba(32, 32, 34, 0.5);
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+    height: 500px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.clean-box p
+{
+    background: none;
+}
+
+.block-result
+{
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    width: 1120px;
+    margin-bottom: 100px;
+}
+
+h2
+{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.input-wrap
+{
+    color: rgba(51, 51, 51, 0.5);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.input-wrap p
+{
+    margin-bottom: 6px;
+}
+
+.small-input
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-input select
+{
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 20px;
+    border-radius: 12px;
+    width: 360px;
+    height: 52px;
+}
+
+.big-input select
+{
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 20px;
+    border-radius: 12px;
+    width: 1120px;
+    height: 52px;
+}
+
+.br
+{
+    width: 1120px;
+    height: 0px;
+    border: 1px solid #EDEEF0;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.result
+{
+    background-color:#168FFF;
+    width: 680px;
+    height: 70px;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.percent-wrapper
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+h3
+{
+    margin-right: 20px;
+    font-size: 24px;
+    
+}
+
+.percent
+{
+    display: inline;
+    height: 23px;
+    width: 47px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    background: #66BB6A;        
+    padding: 2px 14px;
+    text-align: center;
+}
+
+.percent:first-child
+{
+    background-color: white;
+    color: #168FFF;
+}
+
+.tryagain
+{
+    background-color: white;
+    color: #168FFF;
+    /* width: 182px;
+    height: 20px; */
+    width: 258px;
+    height: 52px;
+    padding: 16px 38px;
+    border: 1px solid #168FFF;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 16px;
+}
