@@ -37,9 +37,7 @@ axios.get(url)
                     content = content.replace(/[^0-9]/g, '');
             }
 
-           // if (typeof content === 'string') { content = content.replace(/[^0-9]/g, ''); }
             if (content === '') {content = 0}
-            // if ([2, 3, 4, 6].includes(colIndex) && parseInt(content) === 0) {
             if (([7, 8, 9, 11].includes(colIndex) && parseInt(content) === 0)||($(row).hasClass('rating-color-red'))) {
                 return false;
             }
