@@ -7,6 +7,21 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>TSU.InRating</title>
+    <script>
+        window.onload = function() {
+            document.getElementById('obraz_prog').addEventListener('change', function() {
+              const selectedOption = this.options[this.selectedIndex];
+              const selectedUrl = selectedOption.getAttribute('data-url');
+              fetch('http://localhost:3000/generateCSV/' + encodeURIComponent(selectedUrl))
+                .then(response => response.text())
+                .then(result => {
+                  console.log(result); // это сообщение, возвращаемое сервером
+                  // здесь вы можете добавить логику, которая будет обрабатывать ответ сервера
+                })
+                .catch(error => console.log('error', error));
+            });
+        }
+        </script>
 </head>
 <body>
     <img src="Ellipse 1.svg" alt="" id="Ellipse1">
@@ -39,19 +54,19 @@
                 <div class="input-wrap">
                     <p>Уровень образования</p>
                     <select name="" id="">
-                        <option selected disabled>Не выбрано</option>
+                        <option selected disabled>Бакалавриат</option>
                     </select>
                 </div>
                 <div class="input-wrap">
                     <p>Форма обучения</p>
                     <select name="" id="">
-                        <option selected disabled>Не выбрано</option>
+                        <option selected disabled>Бюджет</option>
                     </select>
                 </div>
                 <div class="input-wrap">
                     <p>Бюджет / Договор </p>
                     <select name="" id="">
-                        <option selected disabled>Не выбрано</option>
+                        <option selected disabled>Бюджет</option>
                     </select>
                 </div>
             </div>
@@ -60,11 +75,14 @@
                     <p>Направление</p>
                     <select name="" id="">
                         <option selected disabled>Не выбрано</option>
+                        <option data-url="https://abiturient.tsu.ru/rating?usg=1&p=01.03.02_%D0%9E_%D0%91_%D0%9E%D0%9F_00000171&l=1&f=18&d=01.03.02&b=%D0%91%D1%8E%D0%B4%D0%B6%D0%B5%D1%82&ef=1">Прикладная математика и информатика</option>
+                        <option data-url="https://abiturient.tsu.ru/rating?usg=1&p=02.03.02_%D0%9E_%D0%A6_00000147&l=1&f=18&d=02.03.02&b=%D0%91%D1%8E%D0%B4%D0%B6%D0%B5%D1%82&ef=1">Фундаментальная информатика и информационные технологии</option>
+                        
                     </select>
                 </div>
                 <div class="input-wrap">
                     <p>Образовательная программа</p>
-                    <select name="" id="">
+                    <select name="" id="obraz_prog">
                         <option selected disabled>Не выбрано</option>
                     </select>
                 </div>
@@ -76,21 +94,15 @@
             <div class="small-input">
                 <div class="input-wrap">
                     <p>Информатика и ИКТ</p>
-                    <select name="" id="">
-                        <option selected disabled>Не выбрано</option>
-                    </select>
+                    <input type="number">
                 </div>
                 <div class="input-wrap">
                     <p>Математика</p>
-                    <select name="" id="">
-                        <option selected disabled>Не выбрано</option>
-                    </select>
+                    <input type="number">
                 </div>
                 <div class="input-wrap">
                     <p>Русский язык</p>
-                    <select name="" id="">
-                        <option selected disabled>Не выбрано</option>
-                    </select>
+                    <input type="number">
                 </div>
             </div>
 
